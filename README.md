@@ -1,0 +1,94 @@
+# Formulário: Missionários Renova-me (KoBoToolbox / OpenRosa)
+
+Repositório com a definição completa, formato XLSForm, especificação XForm XML e mídias do formulário **Missionários Renova-me** da Igreja Renova-me.
+
+---
+
+## 📋 Informações do Formulário
+
+- **Título:** Missionários Renova-me
+- **Form ID:** `a7FqboN3tiXKPo6hSc8MzJ`
+- **Versão:** `32 (2025-09-12 17:50:03)`
+- **UUID Original:** `fe67ba249d41444a9de6eea1f809669d`
+- **Link Enketo Original:** `https://ee.kobotoolbox.org/x/PY2hbkKi`
+- **Novo Servidor Local (K3s):** `https://kobo.gabrielcjr.website` (ou `https://kobo.gabriel.website`)
+
+---
+
+## 🗂 Estrutura de Arquivos
+
+| Arquivo | Descrição |
+|---|---|
+| [`Missionarios_Renovame.xlsx`](./Missionarios_Renovame.xlsx) | Arquivo XLSForm original em formato Excel (XLSX) para edição no Excel ou Kobo |
+| [`Missionarios_Renovame.xls`](./Missionarios_Renovame.xls) | Cópia binária XLS compatível |
+| [`Missionarios_Renovame.xml`](./Missionarios_Renovame.xml) | Definição compilada XForm XML (padrão OpenRosa/ODK) |
+| [`Missionarios_Renovame_asset.json`](./Missionarios_Renovame_asset.json) | Metadados e schema JSON completo da API v2 do KoboToolbox |
+| [`survey.csv`](./survey.csv) | Tabela CSV das perguntas e regras de validação |
+| [`choices.csv`](./choices.csv) | Tabela CSV das opções de múltipla escolha (Gênero e Decisão) |
+| [`settings.csv`](./settings.csv) | Configurações do formulário |
+| [`media/Banner_renovam_vermelho.png`](./media/Banner_renovam_vermelho.png) | Banner de cabeçalho do formulário |
+| [`media/Info_app_Kobotoolbox.jpg`](./media/Info_app_Kobotoolbox.jpg) | Imagem informativa/instruções |
+
+---
+
+## 📊 Campos do Formulário
+
+| Campo (Nome) | Tipo | Rótulo (Label) | Dica (Hint) | Obrigatório | Regra / Opções |
+|---|---|---|---|---|---|
+| `deviceid` | `deviceid` | Metadado do Aparelho | - | Automático | Preenchimento automático pelo app |
+| `Data` | `date` | Data | Data coletada automaticamente, por favor, clique em próximo. | Sim (`true`) | Padrão: `today()` |
+| `Nome` | `text` | Nome | - | Sim (`true`) | Texto livre |
+| `Idade` | `integer` | Idade | Insira apenas números | Sim (`true`) | Apenas números inteiros |
+| `Telefone` | `text` | Telefone | - | Sim (`true`) | Regex: `^\d{11}$` (ex: `75988888888`) |
+| `Genero` | `select_one dh9jq24` | Gênero | - | Sim (`true`) | Opções: `Masculino`, `Feminino` (layout horizontal) |
+| `Recebeu_a_Jesus` | `select_one to0tn99` | Recebeu Jesus? | - | Sim (`true`) | Opções: `Sim`, `Não`, `É evangélico(a)`, `Ficou de decidir ainda` |
+| `Endereco_ou_referencia` | `text` | Endereço ou referência | Opcional | Não (`false`) | Texto livre |
+| `Geolocalizador` | `geopoint` | Geolocalizador | Clique em "obter ponto" para capturar a sua localização atual... | Sim (`true`) | Coordenadas GPS (latitude, longitude, altitude, precisão) |
+| `Observacoes` | `text` | Observações | Opcional | Não (`false`) | Texto livre |
+| `Nome_do_Mission_rio_a` | `text` | Nome do Missionário(a) | Por favor, informe seu nome que está preenchendo esta ficha | Sim (`true`) | Texto livre |
+
+---
+
+## 📱 Como Configurar o Aplicativo Móvel (KoBoCollect / ODK Collect)
+
+No celular dos missionários, instale o **KoBoCollect** (disponível na Google Play Store) ou **ODK Collect**:
+
+1. Abra o **KoBoCollect**.
+2. Toque no ícone do perfil no canto superior direito e selecione **Configurações** (Settings) -> **Servidor** (Server).
+3. Preencha os seguintes dados:
+   - **URL:** `https://kobo.gabrielcjr.website` (ou `https://kobo.gabriel.website`)
+   - **Nome de usuário:** `renovamechurch`
+   - **Senha:** `Rvehonraegloria`
+4. Volte para a tela inicial do aplicativo:
+   - Toque em **Baixar formulário em branco** (Get Blank Form).
+   - O aplicativo baixará automaticamente o formulário **Missionários Renova-me**.
+5. Para coletar dados no campo:
+   - Toque em **Preencher formulário em branco** (Fill Blank Form).
+   - Responda as perguntas e toque em **Salvar formulário e sair**.
+6. Para enviar os dados para o servidor:
+   - Quando tiver conexão com a internet, toque em **Enviar formulário finalizado** (Send Finalized Form).
+   - O formulário será sincronizado instantaneamente com o servidor Kubernetes.
+
+---
+
+## 🌐 Coleta Web (Sem Necessidade do Aplicativo)
+
+O formulário também pode ser respondido diretamente pelo navegador em qualquer smartphone ou computador:
+- **Link do Formulário Web:** `https://kobo.gabrielcjr.website/x/PY2hbkKi`
+
+Possui suporte a salvamento local no navegador se estiver sem conexão, enviando os dados automaticamente assim que a internet retornar.
+
+---
+
+## 💻 Painel Administrativo e Exportação de Dados
+
+Para visualizar todas as respostas coletadas e exportar para Excel/CSV:
+- **Painel:** `https://kobo.gabrielcjr.website/dashboard`
+- **Usuário:** `renovamechurch`
+- **Senha:** `Rvehonraegloria`
+
+Recursos do painel:
+- Tabela com todas as coletas em tempo real
+- Mapa interativo com todos os pontos de geolocalização coletados
+- Exportação para Excel (.xlsx) e CSV
+- Estatísticas de decisões, idade e missionários
