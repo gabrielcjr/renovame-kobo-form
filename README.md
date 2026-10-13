@@ -76,11 +76,14 @@ No celular dos missionários, instale o **KoBoCollect** (disponível na Google P
 O formulário também pode ser respondido diretamente pelo navegador em qualquer smartphone ou computador:
 - **Link do Formulário Web:** `https://kobo.gabrielcjr.website/x/PY2hbkKi`
 
-Possui suporte a salvamento local no navegador se estiver sem conexão, enviando os dados automaticamente assim que a internet retornar.
+Recursos e Segurança da Informação:
+- **Offline First & PWA:** Possui suporte a salvamento local no navegador se estiver sem conexão, enviando os dados automaticamente assim que a internet retornar.
+- **Privacidade e Proteção de Dados:** Por segurança da informação, uma vez que o formulário é enviado ao servidor com sucesso, ele é imediatamente purgado do aparelho celular. Apenas rascunhos em andamento e envios pendentes de conexão permanecem no dispositivo.
+- **Isolamento de Acesso:** O formulário não contém links nem acesso ao painel de controle administrativo, garantindo que o missionário em campo não acesse dados gerais ou coletas de outros membros.
 
 ---
 
-## 💻 Painel Administrativo e Exportação de Dados
+## 💻 Painel Administrativo em Tempo Real e Exportação de Dados
 
 Para visualizar todas as respostas coletadas e exportar para Excel/CSV:
 - **Painel:** `https://kobo.gabrielcjr.website/dashboard`
@@ -88,10 +91,11 @@ Para visualizar todas as respostas coletadas e exportar para Excel/CSV:
 - **Senha:** `Rvehonraegloria`
 
 Recursos do painel:
-- Tabela com todas as coletas em tempo real
-- Mapa interativo com todos os pontos de geolocalização coletados
-- Exportação para Excel (.xlsx) e CSV
-- Estatísticas de decisões, idade e missionários
+- **Atualização Automática ao Vivo:** Novos registros enviados pelos missionários aparecem instantaneamente na tabela e no mapa sem necessidade de recarregar a tela (Live Polling a cada 3 segundos).
+- **Mapa Interativo (Leaflet):** Exibe a localização geográfica dos atendimentos realizados com coordenadas GPS.
+- **Métricas e KPIs:** Indicadores consolidados de total de vidas cadastradas, decisões para Jesus, idade e ranking de missionários.
+- **Exportação Multiformato:** Download direto em Excel (.xlsx), CSV e GeoJSON para sistemas GIS.
+
 
 ---
 
