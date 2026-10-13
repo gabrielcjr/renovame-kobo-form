@@ -92,3 +92,24 @@ Recursos do painel:
 - Mapa interativo com todos os pontos de geolocalização coletados
 - Exportação para Excel (.xlsx) e CSV
 - Estatísticas de decisões, idade e missionários
+
+---
+
+## 📈 Integração Direta com Google Planilhas (Google Sheets)
+
+Para sincronizar automaticamente todas as fichas no Google Sheets em tempo real (exatamente como no serviço gratuito do KoBoToolbox):
+
+1. Crie uma nova planilha no Google Sheets.
+2. Na célula **A1**, cole a fórmula:
+   ```excel
+   =IMPORTDATA("https://kobo.gabrielcjr.website/api/v2/assets/a7FqboN3tiXKPo6hSc8MzJ/data.csv")
+   ```
+
+### 💡 Alternativa com Nomes Amigáveis em Português:
+Se preferir os títulos das colunas e respostas em português:
+```excel
+=IMPORTDATA("https://kobo.gabrielcjr.website/api/v2/assets/a7FqboN3tiXKPo6hSc8MzJ/data.csv?labels=true")
+```
+
+*(URLs curtas equivalentes: `https://kobo.gabrielcjr.website/data.csv` ou `https://kobo.gabrielcjr.website/api/v1/data/a7FqboN3tiXKPo6hSc8MzJ.csv`)*
+
