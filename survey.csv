@@ -1,0 +1,12 @@
+type,name,label::Brasil (português),hint::Brasil (português),default,required,constraint_message,constraint,appearance,parameters
+deviceid,deviceid
+date,Data,Data,"Data coletada automaticamente, por favor, clique em próximo.",today(),true
+text,Nome,Nome,true
+integer,Idade,Idade,true,Insira apenas números
+text,Telefone,Telefone,true,O telefone deve conter exatamente 11 números (Ex 75988888888)).,"regex(., '^\d{11}$')"
+select_one dh9jq24,Genero,Gênero,true,horizontal,randomize=false
+select_one to0tn99,Recebeu_a_Jesus,Recebeu Jesus?,true,horizontal
+text,Endereco_ou_referencia,Endereço ou referência,Opcional,false
+geopoint,Geolocalizador,Geolocalizador,"Clique em ""obter ponto"" para capturar a sua localização atual, se demorar pode clicar em salvar.",true
+text,Observacoes,Observações,Opcional,false
+text,Nome_do_Mission_rio_a,Nome do Missionário(a),"Por favor, informe seu nome que está preenchendo esta ficha",true
