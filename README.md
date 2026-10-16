@@ -58,7 +58,7 @@ No celular dos missionários, instale o **KoBoCollect** (disponível na Google P
 3. Preencha os seguintes dados:
    - **URL:** `https://kobo.gabrielcjr.website` (ou `https://kobo.gabriel.website`)
    - **Nome de usuário:** `renovamechurch`
-   - **Senha:** `Rvehonraegloria`
+   - **Senha:** `cba54321`
 4. Volte para a tela inicial do aplicativo:
    - Toque em **Baixar formulário em branco** (Get Blank Form).
    - O aplicativo baixará automaticamente o formulário **Missionários Renova-me**.
@@ -88,7 +88,7 @@ Recursos e Segurança da Informação:
 Para visualizar todas as respostas coletadas e exportar para Excel/CSV:
 - **Painel:** `https://kobo.gabrielcjr.website/dashboard`
 - **Usuário:** `renovamechurch`
-- **Senha:** `Rvehonraegloria`
+- **Senha:** `cba54321`
 
 Recursos do painel:
 - **Atualização Automática ao Vivo:** Novos registros enviados pelos missionários aparecem instantaneamente na tabela e no mapa sem necessidade de recarregar a tela (Live Polling a cada 3 segundos).
