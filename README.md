@@ -99,21 +99,17 @@ Recursos do painel:
 
 ---
 
-## 📈 Integração Direta com Google Planilhas (Google Sheets)
+## 📈 Integração com Google Planilhas e Excel (Exportação Segura)
 
-Para sincronizar automaticamente todas as fichas no Google Sheets em tempo real (exatamente como no serviço gratuito do KoBoToolbox):
+Por **segurança da informação e privacidade dos dados de contato**, o acesso anônimo à API via `=IMPORTDATA()` foi desativado (retornando HTTP 401). A transferência de dados agora é realizada com total segurança através do **Painel Administrativo Autenticado**:
 
-1. Crie uma nova planilha no Google Sheets.
-2. Na célula **A1**, cole a fórmula:
-   ```excel
-   =IMPORTDATA("https://kobo.gabrielcjr.website/api/v2/assets/a7FqboN3tiXKPo6hSc8MzJ/data.csv")
-   ```
+1. Acesse o Painel Administrativo em `https://kobo.gabrielcjr.website/dashboard` com as credenciais autorizadas.
+2. Utilize uma das opções padronizadas nas **16 colunas oficiais (A..P)**:
+   - **📊 Baixar Excel (.xlsx):** Gera a planilha pronta com fórmulas de WhatsApp e Google Maps integradas.
+   - **📄 Baixar CSV (.csv):** Gera o arquivo CSV no layout oficial de 16 colunas para importar no Google Sheets.
+   - **📋 Copiar Registros Filtrados:** Copia os dados tabulados diretamente para a área de transferência; basta abrir o Google Sheets e colar com `Ctrl + V`.
+   - **📅 Copiar Fichas de Hoje:** Copia apenas as coletas registradas no dia atual.
 
-### 💡 Alternativa com Nomes Amigáveis em Português:
-Se preferir os títulos das colunas e respostas em português:
-```excel
-=IMPORTDATA("https://kobo.gabrielcjr.website/api/v2/assets/a7FqboN3tiXKPo6hSc8MzJ/data.csv?labels=true")
-```
-
-*(URLs curtas equivalentes: `https://kobo.gabrielcjr.website/data.csv` ou `https://kobo.gabrielcjr.website/api/v1/data/a7FqboN3tiXKPo6hSc8MzJ.csv`)*
+### 📋 Estrutura das 16 Colunas Geradas (A..P):
+As fórmulas de **WhatsApp** (Coluna G, apontando para o telefone na coluna F) e **Localizador no Google Maps** (Coluna O, com `REGEXEXTRACT` apontando para o GeoLocalizador na coluna N) são geradas automaticamente prontas para uso.
 
